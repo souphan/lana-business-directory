@@ -20,17 +20,28 @@
                 <ion-label>Name</ion-label>
                 <ion-radio value="title"></ion-radio>
             </ion-item>
-
             <ion-item button detail="false">
                 <ion-label>Distance</ion-label>
                 <ion-radio value="distance"></ion-radio>
+            </ion-item>
+            <ion-item button detail="false">
+                <ion-label>Rating</ion-label>
+                <ion-checkbox value="distance"></ion-checkbox>
+            </ion-item>
+            <ion-item button detail="false">
+                <ion-label>Review</ion-label>
+                <ion-checkbox value="distance"></ion-checkbox>
+            </ion-item>
+            <ion-item button detail="false">
+                <ion-label>Open Now</ion-label>
+                <ion-checkbox value="distance"></ion-checkbox>
             </ion-item>
         </ion-radio-group>
     </ion-list>
 
     <ion-list>
         <ion-radio-group [(ngModel)]="selectedCategory">
-            <ion-list-header>Sessions</ion-list-header>
+            <ion-list-header>Categories</ion-list-header>
 
             <ion-item button detail="false" *ngFor="let category of categories">
                 <ion-label>{{ category.title }}</ion-label>
