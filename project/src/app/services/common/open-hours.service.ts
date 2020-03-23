@@ -12,7 +12,8 @@ export class OpenHoursService {
 
   getOpenHours(openHours) {
     const days = [];
-    const groupedDays = _.groupBy(openHours.days, 'day');
+    if(openHours){
+      const groupedDays = _.groupBy(openHours.days, 'day');
     _.each(groupedDays, (groupedDay) => {
       const day = {
         times: [],
@@ -32,6 +33,7 @@ export class OpenHoursService {
       days.push(day);
     });
     return days;
+    }
   }
 
   isBusinessOpen(openHours) {

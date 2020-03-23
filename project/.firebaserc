@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "lana-business-directory"
+  },
+  "targets": {
+    "lana-business-directory": {
+      "hosting": {
+        "directory": [
+          "lana-business-directory"
+        ]
+      }
+    }
   }
 }
