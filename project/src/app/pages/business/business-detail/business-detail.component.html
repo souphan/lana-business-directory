@@ -28,13 +28,13 @@
     </ion-slides>
 
     <ion-list class="actions">
-        <ion-item button (click)="goToContactUs()">
+        <!-- <ion-item button (click)="goToContactUs()">
             <ion-icon name="time" slot="start"></ion-icon>
             <ion-label>
                 We are {{ isOpen ? 'open' : 'closed' }}
             </ion-label>
-        </ion-item>
-
+        </ion-item> -->
+        <app-contact-us></app-contact-us>
         <ion-item button (click)="getDirections(business.officeLocation)">
             <ion-icon name="navigate" slot="start"></ion-icon>
             <ion-label>

@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: ':id/services', loadChildren: () => import('./pages/services/services.module').then((m) => m.ServicesModule) },
   { path: ':id/catalogs', loadChildren: () => import('./pages/catalogs/catalogs.module').then((m) => m.CatalogsModule) },
   { path: ':id/reviews', loadChildren: () => import('./pages/reviews/reviews.module').then((m) => m.ReviewsModule) },
-  { path: ':id/contacts', loadChildren: () => import('./pages/contacts/contacts.module').then((m) => m.ContactsModule) },
+  // { path: ':id/contacts', loadChildren: () => import('./pages/contacts/contacts.module').then((m) => m.ContactsModule) },
 ];
 
 @NgModule({

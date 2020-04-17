@@ -11,6 +11,7 @@ import { BusinessComponent } from './business/business.component';
 import { PipesModule } from 'src/app/pipes/pipes.module';
 import { BusinessDetailComponent } from './business-detail/business-detail.component';
 import { BusinessesFilterComponent } from './businesses-filter/businesses-filter.component';
+import { ContactUsComponent } from '../contacts/contact-us/contact-us.component';
 
 const routes: Routes = [
   { path: '', component: BusinessComponent },
@@ -30,6 +31,7 @@ const routes: Routes = [
     BusinessComponent,
     BusinessDetailComponent,
     BusinessesFilterComponent,
+    ContactUsComponent
   ],
   entryComponents: [
     BusinessesFilterComponent,
