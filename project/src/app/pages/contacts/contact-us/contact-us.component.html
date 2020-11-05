@@ -28,20 +28,20 @@
     <ion-list>
         <ion-list-header class="header">Contact</ion-list-header>
 
-        <ion-item button detail="false" (click)="call(business.phoneNumber)">
-            <ion-label>Call us</ion-label>
+        <ion-item *ngIf="business?.phoneNumber" button detail="false" (click)="call(business.phoneNumber)">
             <ion-icon name="call" slot="end"></ion-icon>
+            <ion-label>Call</ion-label>
         </ion-item>
-        <ion-item button detail="false" (click)="sendEmail(business.email)">
-            <ion-label>Send us an email</ion-label>
+        <ion-item *ngIf="business?.email" button detail="false" (click)="sendEmail(business.email)">
             <ion-icon name="mail" slot="end"></ion-icon>
+            <ion-label>Email</ion-label>
         </ion-item>
-        <ion-item button detail="false" (click)="getDirections(business.officeLocation)">
-            <ion-label>Find us / Get directions</ion-label>
+        <!-- <ion-item button detail="false" (click)="getDirections(business.officeLocation)">
             <ion-icon name="map" slot="end"></ion-icon>
-        </ion-item>
-        <ion-item button detail="false" (click)="openUrl(business.facebookPage)">
-            <ion-label>Facebook</ion-label>
+            <ion-label>Get directions</ion-label>
+        </ion-item> -->
+        <ion-item *ngIf="business?.facebookPage" button detail="false" (click)="openUrl(business.facebookPage)">
             <ion-icon name="logo-facebook" slot="end"></ion-icon>
+            <ion-label>Facebook</ion-label>
         </ion-item>
     </ion-list>
