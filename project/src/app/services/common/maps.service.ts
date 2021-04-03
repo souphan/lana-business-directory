@@ -19,14 +19,16 @@ export class MapsService {
 
   openMapsApp(location: any, label: string = null) {
     let q;
+    let annotation = location.annotation;
     if (this.platform.is('android')) {
-      q = 'geo:' + location + '?q=' + location;
+      q = 'geo:' + location + '?q=' + annotation[0].latitude + annotation[0].longitude  + ',' + annotation[0].title;
       if (label) {
         q += '(' + label + ')';
       }
     } else {
-      q = 'maps://maps.apple.com/?q=' + location;
+      q = 'maps://maps.apple.com/?q=' + annotation[0].latitude + ',' + annotation[0].longitude  + ',' + annotation[0].title;
     }
+    console.log(q, 'getting Q');
     window.location.href = q;
   }
 

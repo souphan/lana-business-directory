@@ -4,6 +4,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { BusinessesService } from 'src/app/services/businesses.service';
 import { OpenHoursService } from 'src/app/services/common/open-hours.service';
 import { MapsService } from 'src/app/services/common/maps.service';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-business-detail',
@@ -28,6 +29,7 @@ export class BusinessDetailComponent implements OnInit {
   constructor(
     private businessesService: BusinessesService,
     private openHoursService: OpenHoursService,
+    private iab: InAppBrowser,
     private mapsService: MapsService,
     private router: Router,
     private route: ActivatedRoute,
@@ -56,6 +58,10 @@ export class BusinessDetailComponent implements OnInit {
 
   goToReviews() {
     this.router.navigate(['reviews'], {relativeTo: this.route});
+  }
+
+  openUrl(url: string) {
+    this.iab.create(url,'blank');
   }
 
   navigateToWordpress() {

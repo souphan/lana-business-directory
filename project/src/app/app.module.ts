@@ -7,6 +7,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
+//import { IonicStorageModule } from '@ionic/storage-angular';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
@@ -21,6 +22,7 @@ import { BackendLessDataService } from './services/database/backend-less-data.se
 import { HttpDataService } from './services/database/http-data.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 export function getDataService(http: HttpClient, db: AngularFireDatabase) {
   switch (Config.DATA_SERVICE) {
@@ -40,6 +42,7 @@ export function getDataService(http: HttpClient, db: AngularFireDatabase) {
   entryComponents: [],
   imports: [
     BrowserModule,
+    //IonicStorageModule.forRoot(),
     IonicModule.forRoot(),
     AppRoutingModule,
     AngularFireModule.initializeApp(Config.firebase),
@@ -54,6 +57,7 @@ export function getDataService(http: HttpClient, db: AngularFireDatabase) {
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     { provide: DataService, useFactory: getDataService, deps: [HttpClient, AngularFireDatabase] },
     Geolocation,
+    InAppBrowser,
   ],
   bootstrap: [AppComponent],
 })

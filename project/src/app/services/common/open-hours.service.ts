@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import * as _ from 'lodash';
-import format from 'date-format';
+import dateFormat from 'dateformat';
 
 @Injectable({
   providedIn: 'root',
@@ -25,8 +25,8 @@ export class OpenHoursService {
         const openAt = new Date(d.openAt.epoch);
         const closeAt = new Date(d.closeAt.epoch);
 
-        const from = format('hh:mm', openAt);
-        const to = format('hh:mm', closeAt);
+        const from = dateFormat(openAt, "shortTime");
+        const to = dateFormat(closeAt, "shortTime");
         day.times.push(from + ' - ' + to);
       });
 

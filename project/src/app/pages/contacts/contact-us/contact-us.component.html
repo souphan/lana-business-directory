@@ -8,7 +8,7 @@
 </ion-header> -->
 
     <div class="contact-description ion-padding">
-        <!-- <h1>{{business.title}}</h1> -->
+        <!-- <h1>{{business.title}}</h1>  -->
         <p>{{business.description}}</p>
     </div>
 
@@ -17,8 +17,7 @@
         <span>
             <ion-item *ngFor="let day of days">
                 <div class="ion-align-items-center">
-                    <ion-label>{{day.name}}</ion-label>
-                    <ion-note>{{day.times.join(' | ')}}</ion-note>
+                    <ion-label>{{day.name}} {{day.times.join(' | ')}}</ion-label>
                 </div>
             </ion-item>
         </span>
@@ -36,8 +35,12 @@
             <ion-icon name="mail" slot="end"></ion-icon>
             <ion-label>Email</ion-label>
         </ion-item>
-        <!-- <ion-item button detail="false" (click)="getDirections(business.officeLocation)">
-            <ion-icon name="map" slot="end"></ion-icon>
+        <ion-item *ngIf="business?.website" button detail="false" (click)="openUrl(business.website)">
+            <ion-icon name="browsers" slot="end"></ion-icon>
+            <ion-label>Website</ion-label>
+        </ion-item>
+        <!-- <ion-item button detail="false" (click)="openUrl(business.location)">
+            <ion-icon name="navigate" slot="end"></ion-icon>
             <ion-label>Get directions</ion-label>
         </ion-item> -->
         <ion-item *ngIf="business?.facebookPage" button detail="false" (click)="openUrl(business.facebookPage)">
@@ -45,3 +48,4 @@
             <ion-label>Facebook</ion-label>
         </ion-item>
     </ion-list>
+

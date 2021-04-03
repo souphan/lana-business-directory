@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'map', loadChildren: () => import('./pages/map/map.module').then((m) => m.MapPageModule) },
   { path: 'favorites', loadChildren: () => import('./pages/favorites/favorites.module').then((m) => m.FavoritesPageModule) },
   { path: 'featured', loadChildren: () => import('./pages/favorites/favorites.module').then((m) => m.FavoritesPageModule) },
+  { path: 'about', loadChildren: () => import('./pages/about/about.module').then((m) => m.AboutModule) },
   { path: ':id/wordpress', loadChildren: () => import('./pages/wordpress/wordpress.module').then((m) => m.WordpressModule) },
   { path: ':id/drupal', loadChildren: () => import('./pages/drupal/drupal.module').then((m) => m.DrupalModule) },
   { path: ':id/news', loadChildren: () => import('./pages/news/news.module').then((m) => m.NewsModule) },

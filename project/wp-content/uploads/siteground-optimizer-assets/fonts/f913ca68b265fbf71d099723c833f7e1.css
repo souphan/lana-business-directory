@@ -1,0 +1,504 @@
+@font-face {
+  font-family: 'Average';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Average Regular'), local('Average-Regular'), url(https://fonts.gstatic.com/s/average/v9/fC1hPYBHe23MxA7rEet6UQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Barlow Condensed Thin Italic'), local('BarlowCondensed-ThinItalic'), url(https://fonts.gstatic.com/s/barlowcondensed/v4/HTxzL3I-JCGChYJ8VI-L6OO_au7B6xTru2H_nKk.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: local('Barlow Condensed ExtraLight Italic'), local('BarlowCondensed-ExtraLightItalic'), url(https://fonts.gstatic.com/s/barlowcondensed/v4/HTxyL3I-JCGChYJ8VI-L6OO_au7B6xTrF3DmtYkD.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Barlow Condensed Light Italic'), local('BarlowCondensed-LightItalic'), url(https://fonts.gstatic.com/s/barlowcondensed/v4/HTxyL3I-JCGChYJ8VI-L6OO_au7B6xTrc3PmtYkD.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Barlow Condensed Italic'), local('BarlowCondensed-Italic'), url(https://fonts.gstatic.com/s/barlowcondensed/v4/HTxxL3I-JCGChYJ8VI-L6OO_au7B6xTj1lH2.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Barlow Condensed Medium Italic'), local('BarlowCondensed-MediumItalic'), url(https://fonts.gstatic.com/s/barlowcondensed/v4/HTxyL3I-JCGChYJ8VI-L6OO_au7B6xTrK3LmtYkD.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Barlow Condensed SemiBold Italic'), local('BarlowCondensed-SemiBoldItalic'), url(https://fonts.gstatic.com/s/barlowcondensed/v4/HTxyL3I-JCGChYJ8VI-L6OO_au7B6xTrB3XmtYkD.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Barlow Condensed Bold Italic'), local('BarlowCondensed-BoldItalic'), url(https://fonts.gstatic.com/s/barlowcondensed/v4/HTxyL3I-JCGChYJ8VI-L6OO_au7B6xTrY3TmtYkD.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: local('Barlow Condensed ExtraBold Italic'), local('BarlowCondensed-ExtraBoldItalic'), url(https://fonts.gstatic.com/s/barlowcondensed/v4/HTxyL3I-JCGChYJ8VI-L6OO_au7B6xTrf3fmtYkD.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: local('Barlow Condensed Black Italic'), local('BarlowCondensed-BlackItalic'), url(https://fonts.gstatic.com/s/barlowcondensed/v4/HTxyL3I-JCGChYJ8VI-L6OO_au7B6xTrW3bmtYkD.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Barlow Condensed Thin'), local('BarlowCondensed-Thin'), url(https://fonts.gstatic.com/s/barlowcondensed/v4/HTxxL3I-JCGChYJ8VI-L6OO_au7B43Lj1lH2.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: local('Barlow Condensed ExtraLight'), local('BarlowCondensed-ExtraLight'), url(https://fonts.gstatic.com/s/barlowcondensed/v4/HTxwL3I-JCGChYJ8VI-L6OO_au7B497yz3jWvA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Barlow Condensed Light'), local('BarlowCondensed-Light'), url(https://fonts.gstatic.com/s/barlowcondensed/v4/HTxwL3I-JCGChYJ8VI-L6OO_au7B47rxz3jWvA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Barlow Condensed Regular'), local('BarlowCondensed-Regular'), url(https://fonts.gstatic.com/s/barlowcondensed/v4/HTx3L3I-JCGChYJ8VI-L6OO_au7B6x_T3w.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Barlow Condensed Medium'), local('BarlowCondensed-Medium'), url(https://fonts.gstatic.com/s/barlowcondensed/v4/HTxwL3I-JCGChYJ8VI-L6OO_au7B4-Lwz3jWvA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Barlow Condensed SemiBold'), local('BarlowCondensed-SemiBold'), url(https://fonts.gstatic.com/s/barlowcondensed/v4/HTxwL3I-JCGChYJ8VI-L6OO_au7B4873z3jWvA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Barlow Condensed Bold'), local('BarlowCondensed-Bold'), url(https://fonts.gstatic.com/s/barlowcondensed/v4/HTxwL3I-JCGChYJ8VI-L6OO_au7B46r2z3jWvA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local('Barlow Condensed ExtraBold'), local('BarlowCondensed-ExtraBold'), url(https://fonts.gstatic.com/s/barlowcondensed/v4/HTxwL3I-JCGChYJ8VI-L6OO_au7B47b1z3jWvA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local('Barlow Condensed Black'), local('BarlowCondensed-Black'), url(https://fonts.gstatic.com/s/barlowcondensed/v4/HTxwL3I-JCGChYJ8VI-L6OO_au7B45L0z3jWvA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Montserrat Thin Italic'), local('Montserrat-ThinItalic'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUOjIg1_i6t8kCHKm459WxZqh7q29Y.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: local('Montserrat ExtraLight Italic'), local('Montserrat-ExtraLightItalic'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZBg_z8vZ1.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Montserrat Light Italic'), local('Montserrat-LightItalic'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZYgzz8vZ1.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat Italic'), local('Montserrat-Italic'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUQjIg1_i6t8kCHKm459WxRxy7j.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Montserrat Medium Italic'), local('Montserrat-MediumItalic'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZOg3z8vZ1.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Montserrat SemiBold Italic'), local('Montserrat-SemiBoldItalic'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZFgrz8vZ1.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Montserrat Bold Italic'), local('Montserrat-BoldItalic'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZcgvz8vZ1.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: local('Montserrat ExtraBold Italic'), local('Montserrat-ExtraBoldItalic'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZbgjz8vZ1.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: local('Montserrat Black Italic'), local('Montserrat-BlackItalic'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUPjIg1_i6t8kCHKm459WxZSgnz8vZ1.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Montserrat Thin'), local('Montserrat-Thin'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUQjIg1_i6t8kCHKm45_QpRxy7j.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_aZA3gfD-w.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Montserrat Light'), local('Montserrat-Light'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_cJD3gfD-w.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wdhzg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Montserrat Medium'), local('Montserrat-Medium'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_ZpC3gfD-w.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_bZF3gfD-w.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Montserrat Bold'), local('Montserrat-Bold'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_dJE3gfD-w.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_c5H3gfD-w.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local('Montserrat Black'), local('Montserrat-Black'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_epG3gfD-w.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: local('Nunito ExtraLight Italic'), local('Nunito-ExtraLightItalic'), url(https://fonts.gstatic.com/s/nunito/v13/XRXQ3I6Li01BKofIMN5MZ9vEUTo.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Nunito Light Italic'), local('Nunito-LightItalic'), url(https://fonts.gstatic.com/s/nunito/v13/XRXQ3I6Li01BKofIMN4oZNvEUTo.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Nunito Italic'), local('Nunito-Italic'), url(https://fonts.gstatic.com/s/nunito/v13/XRXX3I6Li01BKofIMNaNRss.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Nunito SemiBold Italic'), local('Nunito-SemiBoldItalic'), url(https://fonts.gstatic.com/s/nunito/v13/XRXQ3I6Li01BKofIMN5cYtvEUTo.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Nunito Bold Italic'), local('Nunito-BoldItalic'), url(https://fonts.gstatic.com/s/nunito/v13/XRXQ3I6Li01BKofIMN44Y9vEUTo.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: local('Nunito ExtraBold Italic'), local('Nunito-ExtraBoldItalic'), url(https://fonts.gstatic.com/s/nunito/v13/XRXQ3I6Li01BKofIMN4kYNvEUTo.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: local('Nunito Black Italic'), local('Nunito-BlackItalic'), url(https://fonts.gstatic.com/s/nunito/v13/XRXQ3I6Li01BKofIMN4AYdvEUTo.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: local('Nunito ExtraLight'), local('Nunito-ExtraLight'), url(https://fonts.gstatic.com/s/nunito/v13/XRXW3I6Li01BKofA-seUb-vN.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Nunito Light'), local('Nunito-Light'), url(https://fonts.gstatic.com/s/nunito/v13/XRXW3I6Li01BKofAnsSUb-vN.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v13/XRXV3I6Li01BKofIO-aE.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Nunito SemiBold'), local('Nunito-SemiBold'), url(https://fonts.gstatic.com/s/nunito/v13/XRXW3I6Li01BKofA6sKUb-vN.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Nunito Bold'), local('Nunito-Bold'), url(https://fonts.gstatic.com/s/nunito/v13/XRXW3I6Li01BKofAjsOUb-vN.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local('Nunito ExtraBold'), local('Nunito-ExtraBold'), url(https://fonts.gstatic.com/s/nunito/v13/XRXW3I6Li01BKofAksCUb-vN.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local('Nunito Black'), local('Nunito-Black'), url(https://fonts.gstatic.com/s/nunito/v13/XRXW3I6Li01BKofAtsGUb-vN.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Roboto Thin Italic'), local('Roboto-ThinItalic'), url(https://fonts.gstatic.com/s/roboto/v20/KFOiCnqEu92Fr1Mu51QrEz4dKg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url(https://fonts.gstatic.com/s/roboto/v20/KFOjCnqEu92Fr1Mu51TjASc0CsE.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto Italic'), local('Roboto-Italic'), url(https://fonts.gstatic.com/s/roboto/v20/KFOkCnqEu92Fr1Mu51xGIzc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'), url(https://fonts.gstatic.com/s/roboto/v20/KFOjCnqEu92Fr1Mu51S7ACc0CsE.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'), url(https://fonts.gstatic.com/s/roboto/v20/KFOjCnqEu92Fr1Mu51TzBic0CsE.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: local('Roboto Black Italic'), local('Roboto-BlackItalic'), url(https://fonts.gstatic.com/s/roboto/v20/KFOjCnqEu92Fr1Mu51TLBCc0CsE.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Roboto Thin'), local('Roboto-Thin'), url(https://fonts.gstatic.com/s/roboto/v20/KFOkCnqEu92Fr1MmgVxGIzc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fChc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7GxP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fChc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfChc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local('Roboto Black'), local('Roboto-Black'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmYUtfChc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v12/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojIWmYWRm.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v12/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoDISmYWRm.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v12/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjo0oSmYWRm.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v12/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmYWRm.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v12/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjovoSmYWRm.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v12/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoUoOmYWRm.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v12/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoa4OmYWRm.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v12/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoDIOmYWRm.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v12/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoJYOmYWRm.ttf) format('truetype');
+}

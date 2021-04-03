@@ -5,6 +5,7 @@ import { InAppBrowserService } from 'src/app/services/common/in-app-browser.serv
 import { MapsService } from 'src/app/services/common/maps.service';
 import { EmailService } from 'src/app/services/common/email.service';
 import { CallService } from 'src/app/services/common/call.service';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-contact-us',
@@ -14,13 +15,14 @@ import { CallService } from 'src/app/services/common/call.service';
 export class ContactUsComponent implements OnInit {
   business: any;
   days: any[];
-
+  today: number = Date.now();
+  
   constructor(
     private businessesService: BusinessesService,
     private openHoursService: OpenHoursService,
     private callService: CallService,
     private emailService: EmailService,
-    private inBrowser: InAppBrowserService,
+    private iab: InAppBrowser,
     private mapsService: MapsService,
   ) { }
 
@@ -38,7 +40,7 @@ export class ContactUsComponent implements OnInit {
   }
 
   openUrl(url: string) {
-    this.inBrowser.open(url);
+    this.iab.create(url,'blank');
   }
 
   getDirections(officeLocation: string) {

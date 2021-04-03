@@ -5,7 +5,6 @@
         </ion-buttons>
         <ion-title class="title">
                 LANA
-            <!-- <img alt="logo" id="header_logo" height="40" float-left src="assets/images/LANALOGONew.jpg">  <div class="business-header">{{business.title}}</div> -->
         </ion-title>
         <ion-buttons slot="end">
             <ion-button (click)="toggleFavorites(business.$key)">
@@ -29,13 +28,14 @@
     </ion-slides>
 
     <ion-list class="actions">
-        <!-- <ion-item button (click)="goToContactUs()">
+        <ion-item>
             <ion-icon name="time" slot="start"></ion-icon>
             <ion-label>
                 We are {{ isOpen ? 'open' : 'closed' }}
             </ion-label>
-        </ion-item> -->
+        </ion-item>
         <app-contact-us></app-contact-us>
+        <!-- *ngIf="business?.officeLocation"  -->
         <ion-item button (click)="getDirections(business.officeLocation)">
             <ion-icon name="navigate" slot="start"></ion-icon>
             <ion-label>
@@ -43,12 +43,19 @@
             </ion-label>
         </ion-item>
 
-        <ion-item button (click)="goToReviews()">
+        <!-- <ion-item button detail="false" (click)="openUrl(business.location)">
+            <ion-icon name="navigate" slot="start"></ion-icon>
+            <ion-label>
+               Get directions
+            </ion-label>
+        </ion-item> -->
+
+        <!-- <ion-item button (click)="goToReviews()">
             <ion-icon name="chatbubbles" slot="start"></ion-icon>
             <ion-label>
                 Reviews / Add review
             </ion-label>
-        </ion-item>
+        </ion-item> -->
 
         <ion-item button detail="false" lines="none" (click)="toggleFavorites(business.$key)" *ngIf="!isInFavorites(business.$key)">
             <ion-icon name="star-outline" slot="start"></ion-icon>
@@ -65,7 +72,24 @@
         </ion-item>
     </ion-list>
 
-    <ion-row class="tiles" *ngFor="let tilePair of tiles">
+    <ion-list *ngIf="business.street || business.city || business.state || business.zip" >
+        <ion-list-header class="header">Address</ion-list-header>
+        <div class="contact-description ion-padding">
+            <!-- <h1>{{business.title}}</h1>  -->
+            <p>{{business?.street}} {{business?.city}}, {{business?.state}} {{business?.zip}}</p>
+        </div>
+    
+    </ion-list>
+
+    <!-- <ion-list *ngIf="business.productservice">
+        <ion-list-header class="header">Product/Service</ion-list-header>
+        <div class="contact-description ion-padding">
+            <p>{{business?.productservice}}</p>
+        </div>
+    
+    </ion-list> -->
+
+    <!-- <ion-row class="tiles" *ngFor="let tilePair of tiles">
         <ion-col *ngFor="let tile of tilePair">
             <ion-card class="tile" (click)="navigateTo(tile)">
                 <ion-card-content class="ion-text-center">
@@ -76,7 +100,7 @@
                 </ion-card-content>
             </ion-card>
         </ion-col>
-    </ion-row>
+    </ion-row> -->
 <!-- 
     <ion-list>
         <ion-item button (click)="navigateToWordpress()">
